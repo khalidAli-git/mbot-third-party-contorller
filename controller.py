@@ -9,7 +9,7 @@ BAUD = 9600
 print(f"Connecting to mBot on {PORT}...")
 try:
     ser = serial.Serial(PORT, BAUD, timeout=1)
-    time.sleep(2)  # Allow Arduino reset time
+    time.sleep(2)  
     print("Connected to mBot successfully!")
 except Exception as e:
     print(f"Failed to connect to mBot: {e}")
@@ -17,7 +17,7 @@ except Exception as e:
 
 gamepad = None
 
-# Locate the wireless controller device
+
 devices = [InputDevice(path) for path in evdev.list_devices()]
 for dev in devices:
     name_lower = dev.name.lower()
@@ -42,19 +42,18 @@ try:
             for event in gamepad.read_loop():
                 command = None
                 
-                # D-Pad on gamepads reports as an Absolute Axis (ABS_HAT0Y for vertical, ABS_HAT0X for horizontal)
                 if event.type == ecodes.EV_ABS:
                     if event.code == ecodes.ABS_HAT0Y:
-                        if event.value < 0:      # D-Pad Up
+                        if event.value < 0:      
                             command = 'F'
-                        elif event.value > 0:    # D-Pad Down
+                        elif event.value > 0:    
                             command = 'B'
                         else:
                             command = 'S'
                     elif event.code == ecodes.ABS_HAT0X:
-                        if event.value < 0:      # D-Pad Left
+                        if event.value < 0:      
                             command = 'L'
-                        elif event.value > 0:    # D-Pad Right
+                        elif event.value > 0:    
                             command = 'R'
                         else:
                             command = 'S'
