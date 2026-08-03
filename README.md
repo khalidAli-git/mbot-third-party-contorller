@@ -26,7 +26,7 @@ Ensure you have the following installed on your Linux system:
 Install the required Python packages using pip (preferably inside a virtual environment):
 
 ```bash
-pip install pyserial evdev
+pip install pyserial evdev bleak
 
 ```
 
