@@ -1,4 +1,4 @@
-```markdown
+markdown
 # mBot Linux Gamepad Controller
 
 A lightweight Python and PlatformIO solution to control an mBot robot using a game controller's D-pad over a serial connection.
@@ -79,8 +79,4 @@ python3 controller.py
 * **D-Pad Right:** Turn Right (`R`)
 * **Released:** Stop (`S`)
 
-Press `Ctrl + C` in your terminal at any time to safely stop the mBot and exit the script.
-
-```
-
-```
+Press `Ctrl + C` in your terminal at any time to safely stop the mBot and exit the script
