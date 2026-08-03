@@ -1,4 +1,3 @@
-markdown
 # mBot Linux Gamepad Controller
 
 A lightweight Python and PlatformIO solution to control an mBot robot using a game controller's D-pad over a serial connection.
