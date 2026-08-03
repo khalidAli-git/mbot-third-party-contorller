@@ -6,3 +6,4 @@ to use this download all the controller.py dependencies :
 you also want to go into the controller.py and change line number 6 to the port of the mbot
 example `/dev/USB*`
 
+you can use bluetooth if your mbot has a bluetooth module the controller doesnt need to be pluged in
